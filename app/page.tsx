@@ -1,7 +1,9 @@
+import { NextResponse } from "next/server";
 import styles from "./page.module.css";
 import { headers } from 'next/headers'
 
-export default function Home() {
+
+export default async function Home() {
   const headersList = headers();
   
   return (
