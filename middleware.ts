@@ -2,6 +2,6 @@ import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
 export function middleware(request: NextRequest) {
-    console.log('request xxxxxx', NextResponse.next().body);
+    console.log('request body xxxxxx', request.body);
     return NextResponse.next()
 }
