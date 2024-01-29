@@ -6,7 +6,8 @@ export default function Home() {
   
   return (
     <main className={styles.main}>
-      <div className="container-1">request header: {JSON.stringify(headersList, null, 2)}</div>
+      <div className="container-1">request header: 
+      <pre>{JSON.stringify(headersList, null, 2)}</pre></div>
       <div>request body: </div>
     </main>
   );
