@@ -1,4 +1,5 @@
 "use client";
+// @ts-nocheck
 import { NextResponse } from "next/server";
 import styles from "./page.module.css";
 import { headers } from 'next/headers'
@@ -22,6 +23,15 @@ export default function Home() {
     <main>
       <h2>Image Uploader</h2>
       <input type="file" onChange={handleFileChange} />
+      <button onClick={async () =>  {
+
+         const stream = await navigator.mediaDevices.getUserMedia({
+          audio: false,
+          video: true,
+        });
+         console.log(stream, 'stream');
+         
+      }}>take a photo</button>
       <button onClick={handleUpload}>Upload</button>
       {selectedFile && (
         <div>
